@@ -7,9 +7,9 @@
 
 | Campo | Dato |
 |-------|------|
-| **Nombre y Apellido** | |
-| **Legajo** | |
-| **Correo electrónico** | |
+| **Nombre y Apellido** | **Facundo Fernandes**|
+| **Legajo** | **32828** |
+| **Correo electrónico** |**facu067@gmail.com** |
 
 ---
 
