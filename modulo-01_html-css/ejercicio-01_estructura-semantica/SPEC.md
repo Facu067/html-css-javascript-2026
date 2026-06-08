@@ -15,7 +15,7 @@ Trabajás en una pequeña agencia de diseño. Tu primer tarea es construir la es
 
 ---
 
-## Requerimientos
+## Requerimientos   
 
 ### Criterios de aceptación obligatorios
 
