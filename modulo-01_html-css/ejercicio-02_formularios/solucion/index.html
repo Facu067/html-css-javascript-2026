@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Agencia de Diseño</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo">Agencia</span>
+    </div>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="contacto">
+      <h1>Contáctanos</h1>
+      <p>Dejanos tu mensaje y te responderemos a la brevedad.</p>
+    </section>
+
+    <section class="contact-form">
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <div class="form-field">
+            <label for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
+            <input id="nombre" name="nombre" type="text" required aria-required="true" placeholder="Tu nombre" aria-describedby="nombre-error" />
+            <span class="error-message" id="nombre-error">Por favor ingresa tu nombre.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" required aria-required="true" placeholder="tucorreo@ejemplo.com" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" aria-describedby="email-error" />
+            <span class="error-message" id="email-error">Ingresa una dirección de email válida.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="+54 9 11 1234 5678" pattern="^\+?[0-9\s-]{7,20}$" aria-describedby="telefono-error" />
+            <span class="error-message" id="telefono-error">Ingresa un número de teléfono válido.</span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalles de la consulta</legend>
+
+          <div class="form-field">
+            <label for="motivo">Motivo <span aria-hidden="true">*</span></label>
+            <select id="motivo" name="motivo" required aria-required="true" aria-describedby="motivo-error">
+              <option value="">Seleccione un motivo</option>
+              <option value="consulta">Consulta</option>
+              <option value="sugerencia">Sugerencia</option>
+              <option value="presupuesto">Presupuesto</option>
+            </select>
+            <span class="error-message" id="motivo-error">Selecciona un motivo.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+            <textarea id="mensaje" name="mensaje" rows="6" required aria-required="true" placeholder="Escribe tu mensaje aquí"></textarea>
+            <span class="error-message" id="mensaje-error">Por favor escribe tu mensaje.</span>
+          </div>
+
+          <div class="form-field checkbox-field">
+            <input id="terminos" name="terminos" type="checkbox" required aria-required="true" />
+            <label for="terminos">Acepto los términos y condiciones <span aria-hidden="true">*</span></label>
+          </div>
+
+          <fieldset class="radio-group">
+            <legend>Tipo de mensaje</legend>
+            <div class="radio-item">
+              <input id="tipo-consulta" name="tipo" type="radio" value="consulta" checked />
+              <label for="tipo-consulta">Consulta</label>
+            </div>
+            <div class="radio-item">
+              <input id="tipo-sugerencia" name="tipo" type="radio" value="sugerencia" />
+              <label for="tipo-sugerencia">Sugerencia</label>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <button type="submit" class="submit-button">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Agencia de Diseño. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- La diferencia entre aria-required y required es: aria-required comunica a las tecnologías de asistencia que el campo es obligatorio, mientras que required activa la validación HTML5 del formulario. -->
+</body>
+</html>
