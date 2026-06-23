@@ -21,17 +21,27 @@
         <h1>Contactate con nosotros</h1>
         <p>Dejanos un mensaje y nos pondremos en contacto con Ud. a la brevedad.</p>
 
-         <form action="procesar_formulario.php" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+         <fieldset>
+                <legend>Datos Personales</legend>
+                
+                <div class="campo">
+                    <label for="nombre">Nombre y Apellido: <span aria-hidden="true" class="req-star">*</span></label>
+                    <input type="text" id="nombreApellido" name="nombreApellido" required aria-required="true" aria-describedby="error-nombre">
+                    <span id="error-nombre" class="error-message">Ingresa tu nombre y apellido</span>
+                </div>
+                
+                <div class="campo">
+                    <label for="email">Email: <span aria-hidden="true" class="req-star">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true" placeholder="ejemplo@correo.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" aria-describedby="error-email">
+                    <span id="error-email" class="error-message">Inngresa tu email</span>
+                </div>
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-
-            <button type="submit">Enviar</button>
+                <div class="campo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="Ej: 2215550000" aria-describedby="error-telefono">
+                    <span id="error-telefono" class="error-message">Ingresa tu número de teléfono con la característica y sin 0.</span>
+                </div>   
+                </fieldset>
         </form>
     </main>
 
