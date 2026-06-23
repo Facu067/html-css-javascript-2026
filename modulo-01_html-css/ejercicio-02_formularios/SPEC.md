@@ -135,7 +135,7 @@ En tu archivo `styles.css`, la **primera línea** debe ser:
 Además, en el `index.html`, antes del cierre del `</body>`, agregá:
 
 ```html
-<!-- La diferencia entre aria-required y required es: [tu explicación] -->
+
 ```
 
 Sin estos comentarios exactos en esas posiciones, el ejercicio no se corrige.
