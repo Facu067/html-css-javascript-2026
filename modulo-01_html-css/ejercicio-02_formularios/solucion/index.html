@@ -27,7 +27,7 @@
                 <legend>Datos Personales</legend>
                 
                 <div class="campo">
-                    <label for="nombre">Nombre y Apellido: <span aria-hidden="true" class="req-star">*</span></label>
+                    <label for="nombreApellido">Nombre y Apellido: <span aria-hidden="true" class="req-star">*</span></label>
                     <input type="text" id="nombreApellido" name="nombreApellido" required aria-required="true" aria-describedby="error-nombre">
                     <span id="error-nombre" class="error-message">Ingresa tu nombre y apellido</span>
                 </div>
@@ -44,7 +44,50 @@
                     <span id="error-telefono" class="error-message">Ingresa tu número de teléfono con la característica y sin 0.</span>
                 </div>   
                 </fieldset>
-        </form>
+
+        <fieldset>
+                <legend>Detalles del Mensaje</legend>    
+
+
+                <div class="campo">
+                    <label for = "Motivo">Motivo:<label>
+                    <select id="Motivo" name="Motivo">
+                        <option value="">Seleccione el motivo</option>
+                        <option value="consulta">Presupuesto</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="sugerencia">Soporte</option>
+                        <option value="reclamo">Reclamo</option>    
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje: <span aria-hidden="true" class="req-star">*</span></label>
+                    <textarea id="mensaje" name="mensaje" required aria-required="true" aria-describedby="error-mensaje"></textarea>
+                    <span id="error-mensaje" class="error-message">Ingresa tu mensaje</span>
+                </div>
+
+
+                <div class="campo-radio">
+                    <p>Tipo de contacto:</p>
+                    <input type="radio" id="tipo-consulta" name="tipo" value="consulta" checked>
+                    <label for="tipo-consulta">Consulta</label>
+                    
+                    <input type="radio" id="tipo-sugerencia" name="tipo" value="sugerencia">
+                    <label for="tipo-sugerencia">Sugerencia</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Confirmación</legend>
+                <div class="campo-checkbox">
+                    <input type="checkbox" id="terminos" name="terminos" required aria-required="true">
+                    <label for="terminos">Acepto los términos y condiciones <span aria-hidden="true" class="req-star">*</span></label>
+                </div>
+            </fieldset>
+
+            <div class="acciones">
+                <button type="submit">Enviar</button>
+            </div>
     </main>
 
     <footer>
